@@ -11,7 +11,7 @@ const OracleDisplay = (props) => {
         setTimeout(() => {
             setTextClasses([ classes.OracleText, faders.FadeIn ]);
             setOracle(props.oracle);
-        }, 500);
+        }, 250);
     }, [props.oracle]);
 
     let strikeCount = '';

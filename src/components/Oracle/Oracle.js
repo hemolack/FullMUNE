@@ -8,19 +8,15 @@ const Oracle = () => {
     const [strikes, setStrikes] = useState(0);
     const [interventionPoints, setInterventionPoints] = useState(0);
 
-    const consultOracle = (question, likely) => {
-        
+    const consultOracle = (question, mode) => {
+        // TODO: Add question to the list
         setTimeout(() => {
             let answer;
-            if(likely === 0) {
-                answer = oracleService.getOracle();
+            if(strikes > 2) {
+                setStrikes(0);
+                mode = oracleService.YES_OR_NO;
             }
-            else if(likely > 0) {
-                answer = oracleService.likelyNo();
-            }
-            else {
-                answer = oracleService.likelyYes();
-            }
+            answer = oracleService.getOracle(mode);
             setOracle(answer.answer);
             setInterventionPoints(interventionPoints + answer.interventionPoints);
             setStrikes(strikes + 1);

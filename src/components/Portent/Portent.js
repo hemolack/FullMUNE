@@ -13,7 +13,7 @@ const Portent = () => {
             setPortent('')
             setPortent(portentService.getPortent());
             setTextClasses([ classes.PortentText, faders.FadeIn ]);
-        }, 500);
+        }, 250);
     }
 
     return (
