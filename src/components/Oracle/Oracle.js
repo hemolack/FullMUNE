@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import OracleDisplay from './OracleDisplay';
 import OracleLog from './OracleLog';
 import * as oracleService from '../../services/oracleService';
-import classes from './Oracle.module.css';
-import faders from '../Fader.module.css';
 
 const Oracle = () => {
     const [oracle, setOracle] = useState('');

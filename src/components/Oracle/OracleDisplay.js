@@ -24,7 +24,6 @@ const OracleDisplay = (props) => {
         interventionCount += '! ';
     }
 
-    console.info(props.strikes, props.interventionPoints, interventionCount);
     return (
         <div title="Oracle" className={classes.OracleContainer}>
             <span className={textClasses.join(' ')}>{oracle}</span>
