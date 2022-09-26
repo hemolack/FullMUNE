@@ -10,6 +10,7 @@ const Portent = () => {
     const readPortent = () => {
         setTextClasses([ classes.PortentText, faders.FadeOut ]);
         setTimeout(() => {
+            setPortent('')
             setPortent(portentService.getPortent());
             setTextClasses([ classes.PortentText, faders.FadeIn ]);
         }, 500);

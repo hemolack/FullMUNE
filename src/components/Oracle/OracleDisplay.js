@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './Oracle.module.css';
 import faders from '../Fader.module.css';
 
 const OracleDisplay = (props) => {
+    const [textClasses, setTextClasses] = useState([ classes.OracleText, faders.FadeIn ]);
+    const [oracle, setOracle] = useState('');
+
+    useEffect(() => {
+        setTextClasses([ classes.OracleText, faders.FadeOut ]);
+        setTimeout(() => {
+            setTextClasses([ classes.OracleText, faders.FadeIn ]);
+            setOracle(props.oracle);
+        }, 500);
+    }, [props.oracle]);
 
     let strikeCount = '';
     for(let i = 0; i < props.strikes; ++i) {
@@ -16,8 +26,8 @@ const OracleDisplay = (props) => {
 
     console.info(props.strikes, props.interventionPoints, interventionCount);
     return (
-        <div title="Oracle" className={classes.OracleContainer} onClick={props.consultOracle}>
-            <span className={props.textClasses.join(' ')}>{props.oracle}</span>
+        <div title="Oracle" className={classes.OracleContainer}>
+            <span className={textClasses.join(' ')}>{oracle}</span>
             <span className={classes.StrikeCounter}>{strikeCount}</span>
             <span className={classes.InterventionPointCount}>{interventionCount}</span>
         </div>
