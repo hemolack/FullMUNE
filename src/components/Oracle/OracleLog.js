@@ -20,6 +20,9 @@ const OracleLog = (props) => {
             <button disabled={question === ''} onClick={() => { props.ask(question, oracleService.LIKELY_NO); setQuestion(''); }}>Likely Yes</button>
             <button disabled={question === ''} onClick={() => { props.ask(question, oracleService.LIKELY_YES); setQuestion(''); }}>Likely No</button>
             <button onClick={() => { props.ask('Is everything normal?', 1) }}>Normal?</button>
+            <div>
+                {props.story.map((item, i) => { return <div key={i} className={item.type === 'q' ? classes.Question : classes.Answer}>{item.text}</div> })}
+            </div>
         </div>
     )
 };

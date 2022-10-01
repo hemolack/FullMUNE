@@ -1,10 +1,10 @@
 const interventionList = [
-    'New entity',
-    'Entity positive event',
-    'Entity negative event',
-    'Advance plot',
-    'Regress plot',
-    'Wild'
+    { type: 'New entity', description: 'You encounter a new entity.' },
+    { type: 'Entity positive event', description: 'Something positive happens to an existing entity.' },
+    { type: 'Entity negative event', description: 'Something negative happens to an existing entity.' },
+    { type: 'Advance plot', description: 'The plot advances in a positive direction.' },
+    { type: 'Regress plot', description: 'The plot advances in a negative direction.' },
+    { type: 'Wild', description: 'Something completely unexpected happens.' },
 ]
 
 export const getIntervention = () => {
