@@ -1,14 +1,14 @@
 const tweneEntryList = [
-    'Increase simple element',
-    'Decrease simple element',
-    'Add simple element',
-    'Remove simple element',
-    'Increase major element',
-    'Decrease major element',
-    'Add major element',
-    'Remove major element',
-    'Wild negative',
-    'Wild positive'
+    'Increase a simple element.',
+    'Decrease a simple element.',
+    'Add a simple element.',
+    'Remove a simple element.',
+    'Increase a major element.',
+    'Decrease a major element.',
+    'Add a major element.',
+    'Remove a major element.',
+    'There is a wild negative element.',
+    'There is a wild positive element.'
 ];
 
 export const getTweneEntry = () => {

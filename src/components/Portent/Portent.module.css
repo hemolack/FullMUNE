@@ -10,7 +10,8 @@
 }
 
 .PortentText {
+    color: #282c34;
     position: relative;
-    top: 100px;
+    top: 90px;
     font-size: 40px;
 }

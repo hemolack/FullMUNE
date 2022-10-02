@@ -3,6 +3,7 @@ import OracleDisplay from './OracleDisplay';
 import OracleLog from './OracleLog';
 import * as oracleService from '../../services/oracleService';
 import * as interventionService from '../../services/interventionService';
+import * as tweneService from '../../services/tweneService';
 
 const Oracle = (props) => {
     const [oracle, setOracle] = useState('');
@@ -55,10 +56,25 @@ const Oracle = (props) => {
         }, 500);
     }
 
+    const isEverythingNormal = () => {
+        setTimeout(() => {
+            let answer;
+            answer = oracleService.getOracle(oracleService.YES_OR_NO);
+            console.info(answer);
+            setOracle(answer.answer);
+            if(answer.answer === 'No.') {
+                addStory('Is everything normal?', `${answer.answer}  ${tweneService.getTweneEntry()}`);
+            }
+            else {
+                addStory('Is everything normal?', answer.answer);
+            }
+        }, 500);
+    }
+
     return (
         <React.Fragment>
             <OracleDisplay oracle={oracle} consultOracle={consultOracle} strikes={strikes} interventionPoints={interventionPoints} />
-            <OracleLog ask={consultOracle} story={props.story} />
+            <OracleLog ask={consultOracle} {...props} log={(question) => addStory(question, null)} normal={isEverythingNormal} />
         </React.Fragment>
     )
 }

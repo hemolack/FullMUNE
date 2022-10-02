@@ -30,10 +30,10 @@
 
 .OracleLog {
     position: absolute;
-    top: 380px;
+    top: 390px;
     left: 0px;
     width: 100%;
-    max-height: calc(100% - 380px);
+    max-height: calc(100% - 390px);
     overflow-y: scroll;
 }
 
@@ -41,7 +41,8 @@
     position: absolute;
     top: 320px;
     left: 0px;
-    width: 320px;
+    width: 50%;
+    text-align: left;
 }
 
 .Question {
@@ -56,4 +57,9 @@
     left: 0px;
     text-align: left;
     background-color: rgba(0, 0, 255, 0.25);
+}
+
+.EndOfLog {
+    height: 0px;
+    width: 0px;
 }

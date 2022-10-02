@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Oracle from './components/Oracle/Oracle';
 import Portent from './components/Portent/Portent';
-import './App.css';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [story, setStory] = useState([]);
