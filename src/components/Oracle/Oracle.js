@@ -10,7 +10,6 @@ const Oracle = (props) => {
     const [interventionPoints, setInterventionPoints] = useState(0);
     const story = props.story;
     const setStory = props.setStory;
-    // const [story, setStory] = useState([]);
 
     const addStory = useCallback((question, answer) => {
         let tempStory = [...story];
