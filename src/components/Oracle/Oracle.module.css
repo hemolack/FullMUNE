@@ -3,10 +3,22 @@
     top: 0px;
     left: 0px;
     background-image: url('../../images/crystal-ball-g993c8419d_640.png');
-    background-size: 320px;
-    height: 320px;
-    width: 320px;
+    background-size: 160px;
+    height: 160px;
+    width: 160px;
 }
+
+@media (min-width: 961px) {
+    .OracleContainer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-image: url('../../images/crystal-ball-g993c8419d_640.png');
+        background-size: 320px;
+        height: 320px;
+        width: 320px;
+    }
+  }
 
 .OracleText {
     position: relative;

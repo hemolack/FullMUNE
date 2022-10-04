@@ -3,10 +3,23 @@
     top: 0px;
     right: 0px;
     background-image: url('../../images/scroll-ga998de727_640.png');
-    background-size: 474px;
-    height: 320px;
-    width: 474px;
+    background-size: 237px;
+    height: 160px;
+    width: 237px;
     display: table-row;
+}
+
+@media (min-width: 961px) {
+    .PortentContainer {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-image: url('../../images/scroll-ga998de727_640.png');
+        background-size: 474px;
+        height: 320px;
+        width: 474px;
+        display: table-row;
+    }
 }
 
 .PortentText {
