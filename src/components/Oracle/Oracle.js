@@ -60,7 +60,6 @@ const Oracle = (props) => {
         setTimeout(() => {
             let answer;
             answer = oracleService.getOracle(oracleService.YES_OR_NO);
-            console.info(answer);
             setOracle(answer.answer);
             if(answer.answer === 'No.') {
                 addStory('Is everything normal?', `${answer.answer}  ${tweneService.getTweneEntry()}`);

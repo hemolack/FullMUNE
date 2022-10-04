@@ -10,7 +10,6 @@ const oracleList = [
 export const getOracle = (mode = NORMAL) => {
     if(mode === NORMAL) {
         let n = Math.floor(Math.random() * oracleList.length);
-        console.info(n);
         return oracleList[n];
     }
     if(mode === LIKELY_YES) {

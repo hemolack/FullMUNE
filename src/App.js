@@ -12,7 +12,7 @@ function App() {
       <Oracle story={story} setStory={setStory} />
       <Portent setStory={setStory} />
         <p>
-          <span>Full MUNE</span>
+          <span className="title">Full MUNE</span>
         </p>
     </div>
   );

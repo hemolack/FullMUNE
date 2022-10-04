@@ -9,6 +9,13 @@
     display: table-row;
 }
 
+.PortentText {
+    color: #282c34;
+    position: relative;
+    top: 35px;
+    font-size: 20px;
+}
+
 @media (min-width: 961px) {
     .PortentContainer {
         position: absolute;
@@ -20,11 +27,11 @@
         width: 474px;
         display: table-row;
     }
-}
 
-.PortentText {
-    color: #282c34;
-    position: relative;
-    top: 90px;
-    font-size: 40px;
+    .PortentText {
+        color: #282c34;
+        position: relative;
+        top: 90px;
+        font-size: 40px;
+    }
 }

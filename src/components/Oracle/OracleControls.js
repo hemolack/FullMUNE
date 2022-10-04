@@ -14,8 +14,10 @@ const OracleControls = (props) => {
     return(
         <div className={classes.OracleControls}>
             <label htmlFor="question">Question: </label> 
-            <div className="input-group">
-                <input id="question" className="form-control" type="text" value={props.question} onChange={(e) => { props.setQuestion(e.target.value) }} onKeyDown={checkInput} /> 
+            <div className="input-group flex-nowrap">
+                <input id="question" className="form-control" type="text" value={props.question} onChange={(e) => { props.setQuestion(e.target.value) }} onKeyDown={checkInput} />
+            </div>
+            <div className="input-group flex-nowrap">
                 <Button variant="primary" disabled={props.question === ''} onClick={() => { props.ask(props.question, oracleService.NORMAL); props.setQuestion(''); }}>Ask</Button>
                 <Button variant="secondary" disabled={props.question === ''} onClick={() => { props.ask(props.question, oracleService.YES_OR_NO); props.setQuestion(''); }}>Yes or No</Button>
                 <Button variant="secondary" disabled={props.question === ''} onClick={() => { props.ask(props.question, oracleService.LIKELY_NO); props.setQuestion(''); }}>Likely Yes</Button>
