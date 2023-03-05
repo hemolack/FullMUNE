@@ -94,7 +94,7 @@
         top: 425px;
         left: 0px;
         width: 100%;
-        max-height: calc(100% - 425px);
+        max-height: calc(100% - 525px);
         overflow-y: scroll;
     }
 }
