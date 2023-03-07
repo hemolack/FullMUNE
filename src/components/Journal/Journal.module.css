@@ -1,0 +1,8 @@
+.Journal {
+    position: absolute;
+    left: 50%;
+    top: 320px;
+    width: 50%;
+    height: calc(100vh - 320px);
+    border: solid yellow 1px;
+}
