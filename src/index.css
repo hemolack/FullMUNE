@@ -32,3 +32,13 @@ code {
   font-style: normal;
   font-display: swap;
 }
+
+.modal-content {
+  background-color: #282c34 !important;
+  color: wheat !important;
+  font-family: 'Vecna';
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

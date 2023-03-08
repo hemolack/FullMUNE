@@ -4,5 +4,29 @@
     top: 320px;
     width: 50%;
     height: calc(100vh - 320px);
-    border: solid yellow 1px;
+    /* border: solid yellow 1px; */
+}
+
+.JournalEntry {
+    text-align: left;
+    padding-left: 10px;
+    background-color: gray;
+    margin-bottom: 3px;
+    /* border: solid green 1px; */
+}
+
+.StatEntry {
+    padding-left: 10px;
+}
+
+.JournalTitle {
+    display: inline-block;
+    width: 50%;
+}
+
+.JournalControls {
+    display: inline-block;
+    text-align: right;
+    width: 25%;
+    margin-right: auto;
 }

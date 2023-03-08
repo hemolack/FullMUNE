@@ -26,6 +26,7 @@ const Oracle = (props) => {
     const intervention = useCallback(() => {
         let dmIntervention = interventionService.getIntervention();
         alert(dmIntervention.description);
+        // TODO: tie intervention in with the aiService
         addStory(null, dmIntervention.description);
     }, [addStory]);
 
